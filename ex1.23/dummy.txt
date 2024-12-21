@@ -25,5 +25,5 @@ int main(void)
     // as 'comments':
      // This comment will be promoted to the next line \
   puts("Won't be run"); // may issue a warning "multi-line comment"
-    puts("Hello, again");
+    puts("Hello, //again");
 }
