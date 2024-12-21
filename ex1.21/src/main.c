@@ -1,65 +1,32 @@
 #include <stdio.h>
-
-void entab(char s[], int n);
+#define N 2
 
 int main(void)
 {
-    int n = 2;
-    char s[] = "    This is a sample text           for maybe somthing.";
-
-    printf("line: %s\n", s);
-
-    entab(s, n);
-
-    printf("%d spaces replaces with 1 tab\n", n);
-
-    return 0;
-}
-
-void entab(char s[], int n)
-{
-    int i, j, k;
-    char r[1000];
-
-    i = j = k = 0;
-    while (s[i] != '\0')
+    int c, bc;
+    bc = 0;
+    while ((c = getchar()) != EOF)
     {
-        if (s[i] == ' ')
+        if (c == ' ')
         {
-            ++k;
-            ++i;
-        }
-        else
-        {
-            if (k != 0)
+            ++bc;
+            if (bc == N)
             {
-                for (int l = 0; l < k / n; ++l)
-                {
-                    r[j] = '\t';
-                    ++j;
-                }
-
-                int p = k - n;
-
-                if (p < 0)
-                {
-                    p = k;
-                }
-
-                for (int l = 0; l < p; ++l)
-                {
-                    r[j] = ' ';
-                    ++j;
-                }
-                k = 0;
+                putchar('\t');
+                bc = 0;
             }
-            r[j] = s[i];
-            ++i;
-            ++j;
+            continue;
         }
+        if (bc != 0)
+        {
+            for (int i = 0; i < bc; ++i)
+            {
+                putchar(' ');
+            }
+            bc = 0;
+        }
+        putchar(c);
     }
 
-    r[j] = '\0';
-
-    printf("entab line: %s\n", r);
+    return 0;
 }
