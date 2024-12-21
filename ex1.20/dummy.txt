@@ -1,0 +1,6 @@
+This	is	a	random	text	with	several	tabs	in	it.	It's	used	to	demonstrate	horizontal	space	separation	and	how	it	looks	in	a	code	environment.	Let's	move	on	to	the	next	paragraph.
+
+Tabs	are	quite	interesting	as	they	allow	for	a	consistent	indentation	in	code.	They're	often	used	in	software	engineering	for	structuring	code	in	a	way	that	is	easy	to	read	and	understand.
+
+In	some	cases,	you	can	adjust	the	width	of	the	tabs	to	make	them	larger	or	smaller	depending	on	the	tool	you're	using.	Overall,	tabs	are	a	valuable	feature	in	text	editing	and	programming.
+
